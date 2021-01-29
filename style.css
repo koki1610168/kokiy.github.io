@@ -1,0 +1,766 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+html {
+    scroll-behavior: smooth;
+}
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+
+}
+
+/* navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 999;
+    /* background: crimson; */
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+
+}
+.navbar.sticky {
+    padding:  15px 0;
+    background: crimson;
+}
+.navbar .logo a {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span {
+    color: crimson;
+}
+.navbar.sticky .logo a span {
+    color: white;
+}
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover {
+    color: crimson;
+}
+.navbar.sticky .menu li a:hover {
+    color: white;
+}
+/* menu btn */
+.menu-btn {
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/* home section */
+.home {
+    display: flex;
+    background: url('image3.jpg') no-repeat center;
+    height: 100vh;
+    background-size: 100% 100%;
+    color: white;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width {
+    margin: auto 0 auto 80px;
+}
+.home .home-content .text-1 {
+    font-size: 45px;
+}
+.home .home-content .text-2 {
+    font-size: 100px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3 {
+    font-size: 55px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+    color: crimson;
+    font-weight: 800;
+
+}
+
+/* about section */
+section {
+    padding: 100px 0;
+}
+.about, .skills, .contact, footer{
+    font-family: 'Poppins', sans-serif;
+}
+
+section .title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.about .about-content, 
+.skills .skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .about-content .left{
+    width: 45%;
+}
+
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+.about .about-content .right{
+    width: 55%;
+}
+
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+.about .about-content .right p{
+    text-align: justify;
+}
+
+.h2-text h2{
+    text-align: center;
+    color: white;
+    background: #111;
+    padding: 100px 0 0 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+}
+/* projects section */
+.projects {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+    overflow: hidden;
+    padding-top: 0px;
+}
+
+.projects .projects-content {
+    display: flex;
+    margin: 20px, 20px, 20px, 20px;
+}
+.projects .title {
+    color: white;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 200px 190px 60px;
+    grid-template-areas: "image" "text" "stats";
+
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin: 40px;
+}
+
+.card-image1 {
+    grid-area: image;
+    background: url("image.png");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-text1 {
+    grid-area: text;
+    margin: 25px;
+}
+.card-text1 .date1{
+    color: crimson;
+    font-size: 13px;
+}
+.card-text1 p{
+    color: grey;
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 300;
+}
+.card-text1 h2 {
+    margin-top: 0;
+    font-size: 28px;
+}
+.card-stats1 {
+    grid-area: stats;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: crimson;
+} 
+.card-stats1 .stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+}
+.card-stats1 .border {
+    display: absolute;
+    margin-left: 100px;
+}
+
+.card-stats1 .value1{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.card-stats1 .value1 a {
+    color: white;
+}
+
+.card:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.card-image1 {
+    grid-area: image;
+    background: url("image.png");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-text1 {
+    grid-area: text;
+    margin: 25px;
+}
+.card-text1 .date1{
+    color: crimson;
+    font-size: 13px;
+}
+.card-text1 p{
+    color: grey;
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 300;
+}
+.card-text1 h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: black;
+}
+.card-stats1 {
+    grid-area: stats;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: crimson;
+} 
+.card-stats1 .stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+}
+.card-stats1 .border {
+    display: absolute;
+    margin-left: 100px;
+}
+
+.card-stats1 .value1{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.card-stats1 .value1 a {
+    color: white;
+}
+
+.card:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.card-image2 {
+    grid-area: image;
+    background: url("tokyo.gif");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-text2 {
+    grid-area: text;
+    margin: 25px;
+}
+.card-text2 .date2{
+    color: crimson;
+    font-size: 13px;
+}
+.card-text2 p{
+    color: grey;
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 300;
+}
+.card-text2 h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: black;
+}
+.card-stats2 {
+    grid-area: stats;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: crimson;
+} 
+.card-stats2 .stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+}
+.card-stats2 .border {
+    display: absolute;
+    margin-left: 100px;
+}
+
+.card-stats2 .value2{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.card-stats2 .value2 a {
+    color: white;
+}
+
+.card:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.card-image3 {
+    grid-area: image;
+    background: url("cloning.gif");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-text3 {
+    grid-area: text;
+    margin: 25px;
+}
+.card-text3 .date3{
+    color: crimson;
+    font-size: 13px;
+}
+.card-text3 p{
+    color: grey;
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 300;
+}
+.card-text3 h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: black;
+}
+.card-stats3 {
+    grid-area: stats;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: crimson;
+} 
+.card-stats3 .stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+}
+.card-stats3 .border {
+    display: absolute;
+    margin-left: 100px;
+}
+
+.card-stats3 .value3{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.card-stats3 .value3 a {
+    color: white;
+}
+
+.card:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+
+/* skills section */
+
+.skills .skills-content .column {
+    width: calc(50% - 30px);
+}
+
+.skills .skills-content .left .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;   
+}
+.skills .skills-content .left p {
+    text-align: justify;
+}
+.skills .skills-content .left a {
+    display: inline-block;
+    background: crimson;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.skills .skills-content .left a:hover {
+    color: crimson;
+    background: none; 
+}
+ 
+
+.skills .skills-content .right .bars {
+    margin-bottom: 15px;
+}
+
+.skills .skills-content .right .info {
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right .span {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.skills .skills-content .right .line {
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+
+.skills .skills-content .right .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 9;
+    top: 0;
+    background: crimson;
+}
+
+.skills-content .right .python::before {
+    width: 90%;
+}
+.skills-content .right .cpp::before {
+    width: 50%;
+}
+
+.skills-content .right .js::before {
+    width: 50%;
+}
+.skills-content .right .html::before {
+    width: 70%;
+}
+.skills-content .right .css::before {
+    width: 60%;
+}
+
+/* contact section */
+.contact {
+    background: #111
+}
+.contact h2 {
+    color: white;
+}
+.contact .contact-content {
+    display: flex;
+}
+.contact .contact-content .left {
+    width: calc(50% - 30px);
+    margin-left: 30px;
+}
+
+.contact .contact-content .text {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+    color: white;
+}
+.contact .contact-content .left .icons {
+    margin: 10px 0;
+}
+
+.contact .contact-content .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contact .contact-content .row .info {
+    margin-left: 30px;
+}
+.contact .contact-content .row i {
+    font-size: 25px;
+    color: crimson;
+}
+.contact .contact-content .info .head {
+    color: white;
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title {
+    color: white;
+}
+
+.contact .right {
+    margin-left: 230px;
+}
+.contact .right form .fields {
+    display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .name {
+    margin-right: 10px;
+}
+.contact .right form .email {
+    margin:-left: 15px;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+.contact .right form .field {
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button {
+    height: 47px;
+    width: 170px;
+}
+.contact .right form .button button {
+    width: 100%;
+    height: 100%;
+    border: 2px solid crimson;
+    background: crimson;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact .right form .button button:hover {
+    color: crimson;
+    background: none;
+}
+
+/* footer section */
+footer {
+    background: white;
+    padding: 20px 23px;
+    text-align: center;
+}
+footer span a{
+    color: crimson; 
+    text-decoration: none;
+}
+footer span a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+/* responsive */
+@media (max-width: 1300px){
+    .home .max-width {
+        margin-left: 0px;
+    }
+}
+@media (max-width: 1104px){
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px; 
+    }
+}
+@media (max-width: 991px){
+    .max-width {
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px) {
+    
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: black;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active {
+        left: 0;
+    }
+    .navbar .menu li {
+        display: block;
+    }
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-1 {
+        font-size: 25px;
+    }
+    .home .home-content .text-2 {
+        font-size: 70px;
+        font-weight: 600;
+        margin-left: -3px;
+    }
+    .home .home-content .text-3 {
+        font-size: 35px;
+        margin: 5px 0;
+    }
+    .max-width {
+        max-width: 800px;
+    }
+    .about .about-content .column {
+        width: 100%;
+    }
+    .about .about-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right {
+        flex: 100px;
+    }
+
+    .about .about-content .right .text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 690px){
+    .max-width {
+        padding: 0 23px;
+    }
+    .home .home-content .text-2 {
+        font-size: 60px;
+    }
+    .home .home-content .text-3 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 500px){
+
+    .home .home-content .text-2 {
+        font-size: 50px;
+    }
+    .home .home-content .text-3 {
+        font-size: 27px;
+    }
+}
+
+
+
+
