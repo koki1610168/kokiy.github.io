@@ -515,11 +515,11 @@ section .title {
     width: 90%;
 }
 .skills-content .right .cpp::before {
-    width: 50%;
+    width: 80%;
 }
 
 .skills-content .right .js::before {
-    width: 50%;
+    width: 80%;
 }
 .skills-content .right .html::before {
     width: 70%;
